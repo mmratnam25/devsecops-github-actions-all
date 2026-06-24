@@ -13,7 +13,7 @@ jobs:
         java-version: '21'
         distribution: 'zulu'
         cache: maven
-    - name: Run Sonar Analysis with cloud
+    - name: RunSonar Analysis with cloud
       run:  mvn -B verify sonar:sonar -Dsonar.projectKey=githubactionsdemokey -Dsonar.organization=GithubActionsdemo -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
