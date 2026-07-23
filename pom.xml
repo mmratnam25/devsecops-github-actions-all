@@ -43,7 +43,13 @@
 #5/11/2022 11:14 AM IST
 #Default Location of CodeCoverage File is target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
 -->
-            <plugin>
+            <!--- SonarCloud Plug-In-->
+	<plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>5.7.0.6970</version>
+        	</plugin>
+         <plugin>
                 <groupId>org.jacoco</groupId>
                <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.7</version>
